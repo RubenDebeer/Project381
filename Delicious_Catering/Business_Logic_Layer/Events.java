@@ -10,6 +10,7 @@ public class Events {
     //Attributes 
 
         //Getters 
+        //Setters
       
     //Constructors 
 
