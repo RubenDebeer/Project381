@@ -15,4 +15,8 @@ public class Menu_Cost extends Abstarct_Cost {
         this.Quantity = quantity;
         this.Price = price;
     }
+
+    //Get the mnue selection 
+    //Get the price list in rray 
+    //Calculate 
 } 
