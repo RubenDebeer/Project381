@@ -12,7 +12,7 @@ public class Events {
     private String Theme;
     private String Description;
     private String Venue_Name;
-    private boolean Booking_Conformation;
+    private String Booking_Conformation;
     private int Number_Of_People;
     private int Number_Of_Adults;
     private int Number_Of_Kids;
@@ -25,9 +25,9 @@ public class Events {
         public String GetTheme(){ return Theme;} 
         public String GetDescript(){ return Description;} 
         public String GetVenue(){ return Venue_Name;} 
-        public boolean GetBooking_Conformation(){ return Booking_Conformation;} 
+        public String GetBooking_Conformation(){ return Booking_Conformation;} 
         public int GetNOP(){ return Number_Of_People;} 
-        public int GetNOK(){ return Number_Of_Kids;}
+        public int GetNOK(){ return Number_Of_Kids;} 
         public int GetNOA(){ return Number_Of_Adults;} 
         public Date GetDate(){ return Date_Time;} 
      
@@ -36,7 +36,7 @@ public class Events {
         public void SetTheme(String theme){ this.Theme = theme;}
         public void setDescript(String description){ this.Description = description;}
         public void SetVname(String venue_name){ this.Venue_Name = venue_name;}
-        public void setBCom(Boolean BCom){ this.Booking_Conformation = BCom;}
+        public void setBCom(String BCom){ this.Booking_Conformation = BCom;}
         public void setNOP(int Nop){ this.Number_Of_People = Nop;}
         public void setNOK(int Nok){ this.Number_Of_Kids = Nok;}
         public void setNOA(int Noa){ this.Number_Of_Adults = Noa;}
