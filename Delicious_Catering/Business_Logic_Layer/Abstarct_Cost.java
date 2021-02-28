@@ -7,6 +7,5 @@ public abstract class Abstarct_Cost {
     protected int Quantity;
 
     public abstract double Calculate_Cost();
-
     
 }

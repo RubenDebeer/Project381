@@ -6,7 +6,7 @@ public class Menu_Cost extends Abstarct_Cost {
         return(Quantity * Price);
     }
 
-    public void Menu_Cost(int quantity,double price,){
+    public void Menu_Cost(int quantity,double price){
         this.Quantity = quantity;
         this.Price = price;
     }
