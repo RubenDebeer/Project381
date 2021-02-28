@@ -31,7 +31,7 @@ public class Events {
         public int GetNOA(){ return Number_Of_Adults;} 
         public Date GetDate(){ return Date_Time;} 
      
-        //Setters
+        //Setters aka Constructers
         public void SetType(String type){ this.Type = type;}
         public void SetTheme(String theme){ this.Theme = theme;}
         public void setDescript(String description){ this.Description = description;}
