@@ -11,11 +11,15 @@ public class Bookings implements ISend {
 
     //Get 
     public int GetNumber(){ return Booking_Number;} 
-
+    public String GetBConfor(){ return Booking_Conformation;} 
+    public String GetMeue(){ return Menu_Selection;}
+ 
 
 
     //Set 
-    
+    public void SetType(int BNumber){ this.Booking_Number = BNumber;}
+    public void SetType(String Confor){ this.Booking_Conformation = Confor;}
+    public void SetMenue(String Menue) {this.Menu_Selection = Menue;}
     
     public boolean Checkdate(){
 
