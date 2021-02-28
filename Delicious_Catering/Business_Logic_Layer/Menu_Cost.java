@@ -2,6 +2,11 @@ package Delicious_Catering.Business_Logic_Layer;
 
 public class Menu_Cost extends Abstarct_Cost {
 
+    public double Discount_Amount;
+
+    public double GetDiscount(){ return Discount_Amount;} 
+    public void SetDiscount(Double Discount){ this.Discount_Amount = Discount;}
+
     public  double Calculate_Cost(){
         return(Quantity * Price);
     }
@@ -11,4 +16,4 @@ public class Menu_Cost extends Abstarct_Cost {
         this.Price = price;
     }
 
-}
+} 
