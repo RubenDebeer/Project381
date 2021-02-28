@@ -10,5 +10,5 @@ public abstract class Abstract_Menu {
     protected float Cost_Per_Person;
 
 
-    public abstract String Send_Menu_Selection();
+    public abstract String Send_Menue_Selection();
 }
