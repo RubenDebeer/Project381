@@ -23,8 +23,9 @@ public class Client {
  
     //Constrctors 
         //Default
-        public Client(){
-
+        public Client()
+        {
+           
         }
 
         public Client(String Name , String SName, String PN)
@@ -42,10 +43,16 @@ public class Client {
         public void DisplayCLients(){
 
             for(Client client : ClientList) {
-                System.out.println(client.GetName());
+
+                System.out.println(client.GetName()+" "+client.GetSurname()+ " "+client.GetPhoneNUm());
             }
         }
 
-       
-    
+        public boolean CheckClient(String PhoneNum){
+
+            boolean  found = false;
+                
+            return found;
+
+        }
 }

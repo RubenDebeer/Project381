@@ -12,6 +12,7 @@ public class PL_layer {
         Scanner sc = new Scanner(System.in);
 
         List<Client> NewMemberList = new ArrayList<Client>();
+        
 
         System.out.println("==============================");
         System.out.println("Welcome to Delicious-Catering");
@@ -30,14 +31,11 @@ public class PL_layer {
             System.out.println("Enter your Phone number");
             PhoneNUmber = sc.nextLine();
 
-            //Call the check if exixst class and give the appropriate output
-            //
+           
 
+            //Test 
             cl.DisplayCLients();
-
-            //
-            //
-        
+ 
         }else{
 
             //Add new Client
@@ -58,6 +56,7 @@ public class PL_layer {
             Client newcl = new Client(Name,Surname,newcPhoneNUmber);
 
             NewMemberList.add(newcl); 
+
             cl.AddCLient(NewMemberList);
             
             cl.DisplayCLients();
