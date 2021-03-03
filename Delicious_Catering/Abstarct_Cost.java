@@ -1,4 +1,4 @@
-package Delicious_Catering.Business_Logic_Layer;
+package Delicious_Catering;
 
 public abstract class Abstarct_Cost {
 

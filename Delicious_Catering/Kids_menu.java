@@ -1,4 +1,4 @@
-package Delicious_Catering.Business_Logic_Layer;
+package Delicious_Catering;
 
 public class Kids_menu extends Abstract_Menu {
     public void Get_Selection(String Desert_Option,String Drink_Option, String Sarter_option, String Main_Option){
