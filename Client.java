@@ -32,14 +32,11 @@ public class Client {
             this.Name = Name;
             this.SurName = SName;
             this.Phone_Number = PN;
-
         }
 
         public void AddCLient(List<Client> UpdatedMeberList)
         {
-
             ClientList = UpdatedMeberList;
-
         }
 
         public void DisplayCLients(){
