@@ -1,11 +1,11 @@
 package Delicious_Catering;
 
+import java.sql.ClientInfoStatus;
 import java.util.Scanner;
 
 public class PL_Layer {
     public static void main(String[] args) {
 
-        
         Scanner sc = new Scanner(System.in);
 
         System.out.println("==============================");
@@ -16,44 +16,44 @@ public class PL_Layer {
 
         String option = sc.nextLine();
 
+        Client  cl = new Client();
+
         if (option.toUpperCase().equals("YES")) {
 
+            String PhoneNUmber;
 
-            //GET name and surname form the user  and cehk if he / she exists in the clinet object list
+            System.out.println("Enter your Phone number");
+            PhoneNUmber = sc.nextLine();
+
+            boolean found = cl.CheckClienlist(PhoneNUmber);
+
+            if (found == true) {
+
+                System.out.printf("Welcome ", cl.GetName() + cl.GetSurname());
+            }
             
         }else{
+
             //Add new Client
 
             String Name;
             String Surname;
-            String PhoneNUmber;
-
+            String newcPhoneNUmber;
+          
             System.out.println("Please Enter your name");
             Name = sc.nextLine();
 
             System.out.println("Please Enter your Surname");
             Surname = sc.nextLine();
 
-            System.out.println("Please Enter your phone number");
-            
-            PhoneNUmber = sc.nextLine();
+            System.out.println("Please Enter your phone number");  
+            newcPhoneNUmber = sc.nextLine();
 
-            Client  cl = new Client(Name,Surname,PhoneNUmber);
+            Client newcl = new Client(Name,Surname,newcPhoneNUmber);
 
             cl.AddCLient(cl);
-
-
-            //Add to LCient list
             
         }
 
-
-
-        Client  cl = new Client();
-
-
-
-
-        
     }
 }

@@ -1,7 +1,6 @@
 package Delicious_Catering;
 
 import java.security.PublicKey;
-import java.util.List;
 import java.util.jar.Attributes.Name;
 import java.util.*;
 
@@ -13,7 +12,7 @@ public class Client {
     private String Phone_Number;
     
 
-    private List<Client> ClientList = new List<Client>();
+    private List<Client> ClientList = new ArrayList<Client>();
 
     //Attributes 
         //Getters 
@@ -29,6 +28,10 @@ public class Client {
  
     //Constrctors 
         //Default
+        public Client(){
+
+        }
+
         public Client(String Name , String SName, String PN)
         {
             this.Name = Name;
@@ -43,10 +46,18 @@ public class Client {
 
         }
 
-        public boolean CheckClienlist()
+        public boolean CheckClienlist(String PhoneNumber)
         {
+            boolean result = false;
 
+            for (Client client : ClientList) {
 
+                if (client.GetPhoneNUm().equals(PhoneNumber)) {
+                    return true;
+                }
+            }
+
+            return result;
         }
 }
 //Client_Class_Update3
