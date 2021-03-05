@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.sql.Date;
+
+import javax.print.DocFlavor.STRING;
 
 /**
  * PL_layer
@@ -57,18 +60,27 @@ public class PL_layer {
 
         //Event information is gathered here
 
+        String type;
         System.out.println("Enter the type of the event");
-
+        type = sc.nextLine();
+        
+        String theme;
         System.out.println("Ente the theme of the event");
+        theme =sc.nextLine();
         
         //get Venue details
 
+        String vName;
         System.out.println("Please enter the Venue Name");
-        System.out.println("");
+        vName = sc.nextLine();
 
-
+        String EDate;
         System.out.println("'Enter the Date of the event ");
+        EDate = sc.nextLine();
+
+        String ETime;
         System.out.println("'Enter the Time of the event ");
+        ETime = sc.nextLine();
 
         System.out.println("Would you like Decorations Yes/No ");
 
@@ -78,6 +90,8 @@ public class PL_layer {
         {
             System.out.println("Please give a short description of the decorations you would like");
             String Descriotion = sc.nextLine();
+
+            System.out.println("Decorations added");
             
         }else
         {
@@ -88,9 +102,27 @@ public class PL_layer {
 
 
         //If no ask menu information from the client 
+        System.out.println("Please Choose a Option for the Adult Starter Menu ");
+        String AdultStarterOption = sc.nextLine();
+         
+        System.out.println("Please Choose the Adult Main Meal Menu Option");
+        String AdultMainMenuOption  = sc.nextLine();
 
-        //Create enum adult menu 
-        //Create enum kids menu 
+        System.out.println("Please Choose a Option for the Adult Desert Menu ");
+        String AdultDersertMenuOption  = sc.nextLine();
+
+        
+        System.out.println("Please Chose the KIds Starter Meal Menu Option");
+        String KidsStarterMenuOption = sc.nextLine();
+
+ 
+        System.out.println("Please Chose the KIds Main Meal Option");
+        String KidsMainMealMenuOption = sc.nextLine();
+
+
+        System.out.println("Please Chose the KIds Desert Menu Option");
+        String KidsDersertMEnuOption = sc.nextLine();
+
 
         //after menue choice  ask for the amount of Adults 
 
