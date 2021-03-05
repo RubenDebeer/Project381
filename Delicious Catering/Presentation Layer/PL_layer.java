@@ -11,9 +11,6 @@ public class PL_layer {
 
         Scanner sc = new Scanner(System.in);
 
-        List<Client> NewMemberList = new ArrayList<Client>();
-        
-
         System.out.println("==============================");
         System.out.println("Welcome to Delicious-Catering");
         System.out.println("==============================");
@@ -21,23 +18,18 @@ public class PL_layer {
         System.out.println("Are you a Existing Customer Yes/No?");
 
         String option = sc.nextLine();
-        
+
         Client  cl = new Client();
+
+        
 
         if (option.toUpperCase().equals("YES")) {
 
-            String PhoneNUmber;
+            //Send the phone nuumber to the client for verification and print respose.  
 
-            System.out.println("Enter your Phone number");
-            PhoneNUmber = sc.nextLine();
-
-            //Test 
-            cl.DisplayCLients();
- 
-        }else{
+        }else if(option.toUpperCase().equals("NO")){
 
             //Add new Client
-
             String Name;
             String Surname;
             String newcPhoneNUmber;
@@ -53,17 +45,20 @@ public class PL_layer {
 
             Client newcl = new Client(Name,Surname,newcPhoneNUmber);
 
-            NewMemberList.add(newcl); 
+            cl.AddCLient(newcl);
 
-            cl.AddCLient(NewMemberList);
-            
-            System.out.println(Name + " "+ Surname+ " "+"You are now regestered");
-     
-        }     
+            System.out.println(Name + " "+ Surname+ " "+"We have added you to our list of clients");
+
+        }else if(option.toUpperCase().equals("RAHEAL")){
+
+            cl.DisplayCLients();
+
+        }
 
         //Event information is gathered here
 
-        System.out.println("Ente the type of the event");
+        System.out.println("Enter the type of the event");
+
         System.out.println("Ente the theme of the event");
         
         //get Venue details
