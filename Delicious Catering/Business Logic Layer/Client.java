@@ -5,7 +5,6 @@ public class Client {
     private String Name;
     private String SurName;
     private String Phone_Number;
-    
 
     private List<Client> ClientList = new ArrayList<Client>();
 
@@ -34,12 +33,13 @@ public class Client {
             this.SurName = SName;
             this.Phone_Number = PN;
         }
-
-        public void AddCLient(List<Client> UpdatedMeberList)
+        //Add new client object to the list
+        public void AddCLient(Client newClient)
         {
-            ClientList = UpdatedMeberList;
+            ClientList.add(newClient);
         }
 
+        //Display the Clients
         public void DisplayCLients(){
 
             for(Client client : ClientList) {
@@ -48,11 +48,15 @@ public class Client {
             }
         }
 
-        public boolean CheckClient(String PhoneNum){
+        public void CheckClient(String PhoneNum){
 
-            boolean  found = false;
-                
-            return found;
+            for (Client client : ClientList) {
 
+                if (client.Phone_Number == PhoneNum) {
+
+                    System.out.println("Found it ");
+                             
+                }else continue;  
+            }
         }
 }
