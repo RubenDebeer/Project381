@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.sql.Date;
 
 import javax.print.DocFlavor.STRING;
@@ -175,7 +177,7 @@ public class PL_layer {
             System.out.println("\n");
 
 
-        System.out.println("Please Cho0se the Kids Starter Meal Menu Option");
+        System.out.println("Please Choose the Kids Starter Meal Menu Option");
             for (int i = 0; i < KidsStarter.values().length; i++) {
 
             System.out.println(KidsStarter.values()[i]);
@@ -189,7 +191,7 @@ public class PL_layer {
 
 
  
-        System.out.println("Please Cho0se the Kids Main Meal Option");
+        System.out.println("Please Choose the Kids Main Meal Option");
             for (int i = 0; i < kidsMenu.values().length; i++) {
 
             System.out.println(kidsMenu.values()[i]);
@@ -218,13 +220,13 @@ public class PL_layer {
         //after menue choice  ask for the amount of Adults 
         System.out.println("\n");
         int number_of_Adults ;
-        System.out.println("Please Enter the Number of Adults attending");
+        System.out.println("Please Enter the Number of Adults attending: ");
         number_of_Adults = sc.nextInt();
 
 
         System.out.println("\n");
         int Number_Of_Kids;
-        System.out.println("Please Enter the Number of KIds attending");
+        System.out.println("Please Enter the Number of KIds attending: ");
         Number_Of_Kids = sc.nextInt();
 
         //Send the relevant information to the events Class
@@ -289,5 +291,60 @@ public class PL_layer {
             System.out.println("Thank you for considering Delicious-Catering ");
             B.setBConformation("NO");
         }
+
+        class ()
+        {
+
+        }
+
+        try 
+        {
+            File myObject = new File("Bookings.txt");
+            Scanner myReader = new Scanner(myObject);
+            while (myReader.hasNextLine())
+            {
+                String data = myReader.nextLine();
+                System.out.println(data);
+            }
+            myReader.close();
+        }   
+        catch (FileNotFoundException e )
+        {
+            System.out.println("An error ocurred.");
+            e.printStackTrace();
+        }
+        
+        try 
+        {
+            File myObject1 = new File("Event.txt");
+            Scanner myReader1 = new Scanner(myObject1);
+            while (myReader1.hasNextLine()) 
+            {
+                String data = myReader1.nextLine();
+                System.out.println(data);
+            }
+            myReader1.close();
+        } catch (FileNotFoundException e) 
+        {
+            System.out.println("An error ocurred.");
+            e.printStackTrace();
+        }
+
+        try 
+        {
+            File myObject2 = new File("Venue.txt");
+            Scanner myReader2 = new Scanner(myObject2);
+            while (myReader2.hasNextLine()) 
+            {
+                String data = myReader2.nextLine();
+                System.out.println(data);
+            }
+            myReader2.close();
+        } catch (FileNotFoundException e) 
+        {
+            System.out.println("An error ocurred.");
+            e.printStackTrace();
+        }
+
     }
 }

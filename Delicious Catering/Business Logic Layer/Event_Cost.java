@@ -1,3 +1,4 @@
+
 public class Event_Cost {
 
     private double kids_cost;
