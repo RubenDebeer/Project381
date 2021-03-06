@@ -1,11 +1,10 @@
-public class Adult_Menu_Cost extends Menu_Cost{
-
+public class Adult_Menu_Cost extends Menu_Cost
+{
     @Override
-    public double CalculatMenuCost(int Quantity, String option){
-
-
-        switch (option) {
-
+    public double CalculatMenuCost(int Quantity, String option)
+    {
+        switch (option) 
+        {
             case "Pork":
                 this.CPP = 50.00;
                 break;
@@ -14,11 +13,10 @@ public class Adult_Menu_Cost extends Menu_Cost{
                 break;
             case "Beef":
                 this.CPP = 56.00;
-            break;
-
+                break;
             case "Vegan":
                 this.CPP = 53.00;
-            break;
+                break;
     
         }//end of switch 
         this.Cost = Quantity* this.CPP;
